@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FinanceTracker", "FinanceTracker\FinanceTracker.vcxproj", "{23AA5445-5529-41C0-884F-4F83EB2D9984}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Debug|x64.ActiveCfg = Debug|x64
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Debug|x64.Build.0 = Debug|x64
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Debug|x86.ActiveCfg = Debug|Win32
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Debug|x86.Build.0 = Debug|Win32
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Release|x64.ActiveCfg = Release|x64
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Release|x64.Build.0 = Release|x64
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Release|x86.ActiveCfg = Release|Win32
+		{23AA5445-5529-41C0-884F-4F83EB2D9984}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC831EAF-E7D9-4A8D-BC09-B71E57218CDE}
+	EndGlobalSection
+EndGlobal
