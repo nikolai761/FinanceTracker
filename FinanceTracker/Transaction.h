@@ -4,7 +4,7 @@
 
 class Transaction
 {
-public:
+private:
 
 	enum class Type
 	{
@@ -19,14 +19,7 @@ public:
 		HOME
 	};
 
-	enum class IncomeCategory
-	{
-		SALARY,
-		CASHBACK,
-		TRANSFER
-	};
-
-	struct Time
+		struct Time
 	{
 		int seconds;
 		int minutes;
@@ -45,11 +38,10 @@ public:
 	double amount;
 	Type type;
 	//ExpenceCategory expence;
-//	IncomeCategory income;
 	std::string tag;
 	Date date;
 
-private:
+public:
 
 	//Получение значения суммы double
 	double GetAmount();
@@ -70,7 +62,10 @@ private:
 	void ShowDate();
 
 	//Вывод информации о транзакции в консоль
-	void Show();
+	virtual void Show();
+
+	//Чисто виртуальная функция
+	virtual void getCategory() = 0;
 	
 };
 
