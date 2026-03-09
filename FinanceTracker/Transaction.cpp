@@ -1,22 +1,22 @@
 #include "Transaction.h"
 
 
-double Transaction::GetAmount()
+inline double Transaction::GetAmount()
 {
 	return this->amount;
 }
 
-Transaction::Type Transaction::GetType()
+inline Transaction::Type Transaction::GetType()
 {
 	return this->type;
 }
 
-std::string Transaction::GetTag()
+inline std::string Transaction::GetTag()
 {
 	return this->tag;
 }
 
-Transaction::Date Transaction::GetDate()
+inline Transaction::Date Transaction::GetDate()
 {
 	return this->date;
 }
@@ -41,8 +41,41 @@ void Transaction::Show()
 	    std::cout << "***************************************\n";
 		std::cout << "Amount: " << amount << std::endl;
 		std::cout << "Description: " << tag << std::endl;
-		std::cout << "Type: "; ShowType(); std::cout << std::endl;
-		std::cout << "Date: "; ShowDate(); std::cout << std::endl;
+		std::cout << "Type: "; ShowType(); 
+		std::cout << "Date: "; ShowDate();
 
 }
+
+template<typename T>
+inline void Transaction::SetAmount(T _amount)
+{
+	amount =static_cast<double>(_amount);
+}
+
+
+void Transaction::SetType(std::string _type)
+{
+	if (_type == "INCOME") type = Type::INCOME;
+	else if (_type == "EXPENCE") type == Type::EXPENCE;
+	else std::cout << "Input error. Enter valid type";
+}
+
+template<typename T>
+void Transaction::SetTag(T _tag)
+{
+	tag = _tag;
+}
+
+template<typename T>
+void Transaction::SetDate(T _day, T _month, T _year, T _hours, T _minutes, T _seconds)
+{
+	date.day = _day;
+	date.month = _month;
+	date.year = _year;
+	date.time.hours = _hours;
+	date.time.minutes = _minutes;
+	date.time.seconds = _seconds;
+}
+
+
 

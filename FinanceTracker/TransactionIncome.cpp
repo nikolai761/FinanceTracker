@@ -1,8 +1,13 @@
 #include "TransactionIncome.h"
 
-TransactionIncome::IncomeCategory TransactionIncome::GetCategory()
+inline TransactionIncome::IncomeCategory TransactionIncome::GetCategory()
 {
     return category;
+}
+
+inline std::string TransactionIncome::GetSource()
+{
+	return this->source;
 }
 
 void TransactionIncome::ShowCategory()
@@ -16,7 +21,15 @@ void TransactionIncome::ShowCategory()
 	}
 }
 
+void TransactionIncome::ShowSource()
+{
+	std::cout << "Source: " << source << std::endl;
+}
+
 void TransactionIncome::Show()
 {
-	std::cout << "Category: "; ShowCategory(); std::cout << std::endl;
+	Transaction::Show();
+	std::cout << "Category: "; TransactionIncome::ShowCategory(); 
+	std::cout << "Source: "; TransactionIncome::ShowSource();
+	std::cout << "***************************************\n";
 }

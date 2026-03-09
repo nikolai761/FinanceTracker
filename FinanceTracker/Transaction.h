@@ -12,13 +12,6 @@ private:
 		EXPENCE
 	};
 
-	enum class ExpenceCategory
-	{
-		FOOD,
-		CLOSES,
-		HOME
-	};
-
 		struct Time
 	{
 		int seconds;
@@ -42,19 +35,39 @@ private:
 	Date date;
 
 public:
+	//Getters
 
 	//Получение значения суммы double
-	double GetAmount();
+	inline double GetAmount();
 
 	//Получение знаяения типа транзакции Transaction::Type
-	Type GetType();
+	inline Type GetType() ;
 
 	//Получение строки описания 
-	std::string GetTag();
+	inline std::string GetTag();
 
 	//Получение структуры даты Transaction::Date
-	Date GetDate();
+	inline Date GetDate();
 
+
+
+	//Setters
+
+	template<typename T>
+	void SetAmount(T _amount);
+
+	void SetType(std::string _type);
+
+	template<typename T>
+	void SetTag(T _tag);
+
+	template<typename T>
+	void SetDate(T day, T month, T year, T hours, T minutes, T seconds);
+
+
+
+	//Showing
+	
 	//Вывод типа в консоль
 	void ShowType();
 
@@ -68,4 +81,5 @@ public:
 	virtual void getCategory() = 0;
 	
 };
+
 
