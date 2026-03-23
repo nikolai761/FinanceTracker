@@ -15,9 +15,9 @@ void TransactionIncome::ShowCategory()
 
 	switch (category)
 	{
-	case  IncomeCategory::SALARY : {std::cout << "SALARY"; break;}
-	case  IncomeCategory::CASHBACK: {std::cout << "CASHBACK"; break;}
-	case  IncomeCategory::TRANSFER: {std::cout << "TRANSFER"; break;}
+	case  IncomeCategory::SALARY : {std::cout << "SALARY\n"; break;}
+	case  IncomeCategory::CASHBACK: {std::cout << "CASHBACK\n"; break;}
+	case  IncomeCategory::TRANSFER: {std::cout << "TRANSFER\n"; break;}
 	}
 }
 

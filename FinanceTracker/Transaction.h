@@ -53,16 +53,13 @@ public:
 
 	//Setters
 
-	template<typename T>
-	void SetAmount(T _amount);
+	void SetAmount(double _amount);
 
 	void SetType(std::string _type);
 
-	template<typename T>
-	void SetTag(T _tag);
+	void SetTag(std::string _tag);
 
-	template<typename T>
-	void SetDate(T day, T month, T year, T hours, T minutes, T seconds);
+	void SetDate(int day, int month, int year, int hours, int minutes, int seconds);
 
 
 

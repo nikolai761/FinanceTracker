@@ -25,8 +25,8 @@ void Transaction::ShowType()
 {
 	switch (type)
 	{
-	case  Type::EXPENCE: {std::cout << "EXPENCE"; break;}
-	case  Type::INCOME: {std::cout << "INCOME"; break;}
+	case  Type::EXPENCE: {std::cout << "EXPENCE\n"; break;}
+	case  Type::INCOME: {std::cout << "INCOME\n"; break;}
 	}
 }
 
@@ -46,8 +46,7 @@ void Transaction::Show()
 
 }
 
-template<typename T>
-inline void Transaction::SetAmount(T _amount)
+inline void Transaction::SetAmount(double _amount)
 {
 	amount =static_cast<double>(_amount);
 }
@@ -60,14 +59,12 @@ void Transaction::SetType(std::string _type)
 	else std::cout << "Input error. Enter valid type";
 }
 
-template<typename T>
-void Transaction::SetTag(T _tag)
+void Transaction::SetTag(std::string _tag)
 {
 	tag = _tag;
 }
 
-template<typename T>
-void Transaction::SetDate(T _day, T _month, T _year, T _hours, T _minutes, T _seconds)
+void Transaction::SetDate(int _day, int _month, int _year, int _hours, int _minutes, int _seconds)
 {
 	date.day = _day;
 	date.month = _month;
