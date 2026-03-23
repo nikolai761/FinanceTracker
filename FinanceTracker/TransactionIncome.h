@@ -36,6 +36,6 @@ public:
 	void SetCategory(std::string _category);
 
 	//Установка значения для источника
-
+	void SetSource(std::string _source);
 };
 

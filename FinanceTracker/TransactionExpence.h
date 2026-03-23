@@ -29,5 +29,9 @@ public:
 	//Вывод всей информации о транзакции Перегруженный метод
 	void Show() override;
 
+	
+	//Ввод категории
+	void SetCatogory(std::string _category);
+
 };
 
