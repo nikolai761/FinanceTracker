@@ -33,3 +33,16 @@ void TransactionIncome::Show()
 	std::cout << "Source: "; TransactionIncome::ShowSource();
 	std::cout << "***************************************\n";
 }
+
+void TransactionIncome::SetCategory(std::string _category)
+{
+	if (_category == "SALARY") category =IncomeCategory::SALARY;
+	else if (_category == "CASHBACK") category == IncomeCategory::CASHBACK;
+	else if (_category == "TRANSFER") category == IncomeCategory::TRANSFER;
+	else std::cout << "Input error. Enter valid type";
+}
+
+void TransactionIncome::SetSource(std::string _source)
+{
+	source = _source;
+}

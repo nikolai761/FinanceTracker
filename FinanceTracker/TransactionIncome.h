@@ -18,7 +18,7 @@ private:
 public:
 
 	//Получение значения категории 
-	inline IncomeCategory GetCategory();
+	inline IncomeCategory GetCategory() ;
 
 	//Получение значения источника
 	inline std::string GetSource();
