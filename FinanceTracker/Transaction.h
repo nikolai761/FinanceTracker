@@ -1,6 +1,7 @@
 #pragma once
 #include<string>
 #include<iostream>
+#include <vector>
 
 class Transaction
 {
@@ -50,6 +51,10 @@ public:
 	inline Date GetDate();
 
 
+	//Constuctors
+	Transaction();
+	Transaction(double, std::string, std::string, std::vector<int>);
+
 
 	//Setters
 
@@ -75,7 +80,10 @@ public:
 	virtual void Show();
 
 	//Чисто виртуальная функция
-	virtual void getCategory() = 0;
+	virtual ~Transaction() = 0
+	{
+		std::cout << "bym";
+	}
 	
 };
 

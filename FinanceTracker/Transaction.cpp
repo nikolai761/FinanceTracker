@@ -21,6 +21,19 @@ inline Transaction::Date Transaction::GetDate()
 	return this->date;
 }
 
+Transaction::Transaction()
+{
+
+}
+
+Transaction::Transaction(double _amount, std::string _type, std::string _tag, std::vector<int> date)
+{
+	SetAmount(_amount);
+	SetType(_type);
+	SetTag(_tag);
+	SetDate(date[0], date[1], date[2], date[3], date[4], date[5]);
+}
+
 void Transaction::ShowType()
 {
 	switch (type)
@@ -33,7 +46,7 @@ void Transaction::ShowType()
 void Transaction::ShowDate()
 {
 	std::cout << date.day << "." << date.month <<"."<< date.year<<std::endl;
-	std::cout << date.time.hours << ":" << date.time.minutes << ":" << date.time.seconds << std::endl;
+	std::cout <<"Time: "<< date.time.hours << ":" << date.time.minutes << ":" << date.time.seconds << std::endl;
 }
 
 void Transaction::Show()

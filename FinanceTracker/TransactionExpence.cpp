@@ -21,4 +21,9 @@ void TransactionExpence::Show()
 	std::cout << "Date: "; ShowCategory();
 }
 
+void TransactionExpence::SetCatogory(std::string _category)
+{
+	
+}
+
 

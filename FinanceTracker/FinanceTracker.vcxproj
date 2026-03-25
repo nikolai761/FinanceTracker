@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileProcessing.cpp" />
     <ClCompile Include="FinanceTracker.cpp" />
     <ClCompile Include="Transaction.cpp" />
     <ClCompile Include="TransactionExpence.cpp" />
     <ClCompile Include="TransactionIncome.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileProcessing.h" />
     <ClInclude Include="Transaction.h" />
     <ClInclude Include="TransactionExpence.h" />
     <ClInclude Include="TransactionIncome.h" />

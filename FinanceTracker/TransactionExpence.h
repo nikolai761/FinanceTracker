@@ -18,6 +18,9 @@ private:
 
 public:
 
+	//Конструкторы
+	
+
 	//Получение значения категории 
 	inline ExpenceCategory GetCategory();
 
