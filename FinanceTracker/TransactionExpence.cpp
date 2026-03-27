@@ -23,7 +23,7 @@ void TransactionExpence::ShowCategory()
 void TransactionExpence::Show()
 {
 	Transaction::Show();
-	std::cout << "Date: "; ShowCategory();
+	std::cout << "Category: "; ShowCategory();
 }
 
 void TransactionExpence::SetCategory(std::string _category)

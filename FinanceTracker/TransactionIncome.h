@@ -49,7 +49,7 @@ public:
 	//Деструктор
 	~TransactionIncome() override
 	{
-		std::cout << "boom";
+		std::cout << "\nIncomeDestructor\n";
 	}
 };
 

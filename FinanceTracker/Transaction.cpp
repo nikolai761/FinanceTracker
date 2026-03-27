@@ -11,6 +11,16 @@ inline Transaction::Type Transaction::GetType()
 	return this->type;
 }
 
+std::string Transaction::GetTypeString(Type _type)
+{
+	switch (_type)
+	{
+	case Type::INCOME: return "INCOME";
+	case Type::EXPENCE: return "EXPENCE";
+	default: return "INVALID_TYPE";
+	}
+}
+
 inline std::string Transaction::GetTag()
 {
 	return this->tag;
@@ -19,6 +29,19 @@ inline std::string Transaction::GetTag()
 inline Transaction::Date Transaction::GetDate()
 {
 	return this->date;
+}
+
+std::string Transaction::GetDateString(Date _date)
+{
+	std::string date;
+	date+= _date.day += _date.month += _date.year;
+	return date;
+}
+
+std::string Transaction::GetTimeString(Date _date)
+{
+	std::string time;
+	time += _date.time.hours += _date.time.minutes += _date.time.seconds;
 }
 
 Transaction::Transaction()

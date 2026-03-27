@@ -31,7 +31,6 @@ private:
 
 	double amount;
 	Type type;
-	//ExpenceCategory expence;
 	std::string tag;
 	Date date;
 
@@ -46,11 +45,18 @@ public:
 	//Получение знаяения типа транзакции Transaction::Type
 	inline Type GetType() ;
 
+	//Получение типа транзакции строкой 
+	std::string GetTypeString(Type);
+
 	//Получение строки описания 
 	inline std::string GetTag();
 
 	//Получение структуры даты Transaction::Date
 	inline Date GetDate();
+
+	std::string GetDateString(Date data);
+
+	std::string GetTimeString(Date data);
 
 
 	//Constuctors
@@ -84,7 +90,7 @@ public:
 	//Чисто виртуальная функция
 	virtual ~Transaction() = 0
 	{
-		std::cout << "bym";
+		std::cout << "TransactionDestructor";
 	}
 	
 };
