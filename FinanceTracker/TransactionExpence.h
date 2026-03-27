@@ -19,7 +19,12 @@ private:
 public:
 
 	//Конструкторы
-	
+	TransactionExpence();
+	TransactionExpence(double _amount, std::string _type, std::string _tag, std::vector<int>_date, std::string _category) :Transaction(_amount, _type, _tag, _date)
+	{
+		SetType(_type);
+		SetCategory(_category);
+	};
 
 	//Получение значения категории 
 	inline ExpenceCategory GetCategory();
@@ -34,7 +39,7 @@ public:
 
 	
 	//Ввод категории
-	void SetCatogory(std::string _category);
+	void SetCategory(std::string _category);
 
 };
 

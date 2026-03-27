@@ -26,9 +26,9 @@ Transaction::Transaction()
 
 }
 
-Transaction::Transaction(double _amount, std::string _type, std::string _tag, std::vector<int> date)
+Transaction::Transaction(double _amount, std::string _type, std::string _tag, std::vector<int> date) :amount (_amount)
 {
-	SetAmount(_amount);
+	
 	SetType(_type);
 	SetTag(_tag);
 	SetDate(date[0], date[1], date[2], date[3], date[4], date[5]);

@@ -1,5 +1,10 @@
 #include "TransactionExpence.h"
 
+TransactionExpence::TransactionExpence()
+{
+	std::cout << "ky";
+}
+
 inline  TransactionExpence::ExpenceCategory TransactionExpence::GetCategory()
 {
 	return category;
@@ -21,8 +26,12 @@ void TransactionExpence::Show()
 	std::cout << "Date: "; ShowCategory();
 }
 
-void TransactionExpence::SetCatogory(std::string _category)
+void TransactionExpence::SetCategory(std::string _category)
 {
+	if (_category == "FOOD") category = ExpenceCategory::FOOD;
+	else if (_category == "CLOSES") category == ExpenceCategory::CLOSES;
+	else if (_category == "HOME") category == ExpenceCategory::HOME;
+	else std::cout << "Input error. Enter valid type";
 	
 }
 

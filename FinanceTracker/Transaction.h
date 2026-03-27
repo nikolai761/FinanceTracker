@@ -13,7 +13,7 @@ private:
 		EXPENCE
 	};
 
-		struct Time
+	struct Time
 	{
 		int seconds;
 		int minutes;
@@ -35,6 +35,8 @@ private:
 	std::string tag;
 	Date date;
 
+
+
 public:
 	//Getters
 
@@ -53,7 +55,7 @@ public:
 
 	//Constuctors
 	Transaction();
-	Transaction(double, std::string, std::string, std::vector<int>);
+	Transaction(double, std::string,std::string,  std::vector<int>);
 
 
 	//Setters

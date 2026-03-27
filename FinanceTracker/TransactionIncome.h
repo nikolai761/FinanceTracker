@@ -20,12 +20,13 @@ public:
 	//Конструкторы
 	TransactionIncome(double _amount, std::string _type, std::string _tag, std::vector<int>_date, std::string _category,std::string _source) :Transaction(_amount, _type, _tag, _date)
 	{
+		SetType(_type);
 		SetCategory(_category);
 		SetSource(_source);
 	};
 
 	//Получение значения категории 
-	inline IncomeCategory GetCategory();
+	inline  IncomeCategory GetCategory() ;
 
 	//Получение значения источника
 	inline std::string GetSource();
