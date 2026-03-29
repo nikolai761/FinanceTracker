@@ -4,6 +4,8 @@
 #include <string>
 #include <vector>
 #include"Transaction.h"
+#include"TransactionIncome.h"
+#include "TransactionExpence.h"
 
 
 
@@ -68,7 +70,11 @@ public:
 		file << "Amount : " << transaction->GetAmount()<<std::endl;
 		file << "Type of transaction : " << transaction->GetTypeString(transaction->GetType()) << std::endl;
 		file << "Description : " << transaction->GetTag() << std::endl;
-		file << "Date : " << transaction->GetDateString(transaction->GetDate()) << std::endl
+		file << "Date : " << transaction->GetDateString(transaction->GetDate()) << std::endl;
+		if (auto f_ptr=dynamic_cast<TransactionIncome *>(transaction))
+		f_ptr->GetCategory();
+		if(auto f_ptr=dynamic_cast<TransactionExpence *>(transaction))
+		f_ptr->GetCategory();
 	}
 
 
