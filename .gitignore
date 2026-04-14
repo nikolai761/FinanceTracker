@@ -16,3 +16,4 @@ x86/
 # User-specific files
 *.user
 *.suo
+.vs/
